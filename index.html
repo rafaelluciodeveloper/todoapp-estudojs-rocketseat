@@ -3,12 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <title>TODO App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <div id="app">
-      <ul></ul>
-      <input type="text" placeholder="Digite uma tarefa" />
-      <button>Adicionar</button>
+    <div id="app" class="container">
+      <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <h1 class="display-4">TodoApp</h1>
+          <p class="lead">
+            Exemplo construido com ensinamentos do curso JS básico da
+            rocketseat.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Digite uma tarefa"
+              aria-label="Digite uma tarefa"
+              aria-describedby="button-add"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button" id="button-add">
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="col-md-12">
+        <ul class="list-group"></ul>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

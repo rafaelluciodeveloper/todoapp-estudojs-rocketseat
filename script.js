@@ -8,11 +8,16 @@ function renderTodos() {
   listElement.innerHTML = '';
   for (todo of todos) {
     var todoElement = document.createElement('li');
+    todoElement.setAttribute(
+      'class',
+      'list-group-item list-group-item-action d-flex justify-content-between align-items-center'
+    );
     var todoText = document.createTextNode(todo);
     var linkElement = document.createElement('a');
     linkElement.setAttribute('href', '#');
     var pos = todos.indexOf(todo);
     linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')');
+    linkElement.setAttribute('class', 'btn btn-sm btn-danger');
 
     var linkText = document.createTextNode('Excluir');
 
@@ -24,7 +29,7 @@ function renderTodos() {
 }
 
 function addTodo() {
-  var textTodo = inputElement.value + ' - ';
+  var textTodo = inputElement.value;
   todos.push(textTodo);
   inputElement.value = '';
   renderTodos();
